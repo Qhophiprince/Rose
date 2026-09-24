@@ -16,7 +16,6 @@ body{
     font-family: Arial, sans-serif;
 }
 
-/* NEW: master container to stop content stretching edge-to-edge on wide screens */
 .navbar,
 .second_section,
 .learn_container,
@@ -69,13 +68,12 @@ body{
 }
 
 .profile{
-    display: flex;
+    display: block;
     border-radius: 50%;
     width: 160px;
     height: 160px;
     max-width: 40vw;
     max-height: 40vw;
-    align-items: center;
     border: 5px solid rgb(251, 251, 251);
     object-fit: cover;
 }
@@ -94,7 +92,7 @@ body{
     margin-bottom: 5px;
     margin-top: 15px;
     color: orange;
-    font-size: clamp(1.1rem, 3vw, 1.8rem); /* was default h1 ~2em, now scales sanely */
+    font-size: clamp(1.1rem, 3vw, 1.8rem);
 }
 
 .programme{
@@ -127,6 +125,13 @@ body{
     background-repeat: no-repeat;
 }
 
+main{
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
 .main_about_me{
     text-align: center;
     margin-bottom: 3px;
@@ -151,7 +156,7 @@ body{
 }
 
 .second_section > div:last-child{
-    max-width: 500px; /* stops paragraph text stretching too wide */
+    max-width: 500px;
 }
 
 .second_section p{
@@ -170,13 +175,16 @@ h4{
     row-gap: 10px;
     list-style: none;
     padding-left: 0;
+    margin: 0;
     font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    text-align: left;
 }
 
 .cv_and_send_message{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .cv{
@@ -187,6 +195,9 @@ h4{
     background-color: orange;
     color: rgb(1, 1, 1);
     margin: 0;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
 }
 
 .cv:hover{
@@ -202,6 +213,8 @@ h4{
     background-color: rgb(252, 252, 252);
     color: rgb(0, 0, 0);
     margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .message:hover{
@@ -224,6 +237,15 @@ h4{
     padding: 15px;
     flex: 1 1 280px;
     font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    text-align: left;
+}
+
+.card-icon,
+.card-icon-2,
+.card-icon-3{
+    font-weight: bold;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    margin-bottom: 8px;
 }
 
 .card-info{
@@ -275,6 +297,10 @@ h4{
     padding: 30px 20px;
 }
 
+.skills-bar{
+    text-align: center;
+}
+
 .skill_intro h3{
     font-size: clamp(1rem, 2vw, 1.3rem);
 }
@@ -282,6 +308,13 @@ h4{
 .skills-content{
     font-size: clamp(0.8rem, 1.4vw, 0.95rem);
     line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skills-bar hr{
+    border-color: rgba(255,255,255,0.2);
+    margin: 20px auto;
     max-width: 700px;
 }
 
@@ -292,14 +325,12 @@ h4{
     margin-top: 10px;
 }
 
-/* ---------- TABLET (max-width: 1024px) ---------- */
 @media (max-width: 1024px) {
     .individual-cards{
         gap: 15px;
     }
 }
 
-/* ---------- MOBILE / PHONE (max-width: 600px) ---------- */
 @media (max-width: 600px) {
     .navbar{
         flex-direction: column;
@@ -326,6 +357,10 @@ h4{
         flex-direction: column;
         text-align: center;
         padding: 15px;
+    }
+
+    .second_section > div:last-child{
+        text-align: left;
     }
 
     .second_photo{
