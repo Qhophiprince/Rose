@@ -349,7 +349,7 @@ h4{
     }
 
     .navbar > div:last-child{
-    align-self: flex-end;
+        align-self: flex-end;
     }
 
     .profile_section{
