@@ -98,18 +98,16 @@ body{
 
 .typewriter-name{
     display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
+    clip-path: inset(0 100% 0 0);
     border-right: 3px solid orange;
-    width: 0;
     animation:
-        typing-name 3s steps(21, end) forwards,
-        blink-caret 0.75s step-end infinite;
+        reveal-name 3s steps(21, end) forwards,
+        blink-caret 0.75s step-end infinite 3s;
 }
 
-@keyframes typing-name{
-    from{ width: 0; }
-    to{ width: 24ch; }
+@keyframes reveal-name{
+    from{ clip-path: inset(0 100% 0 0); }
+    to{ clip-path: inset(0 0 0 0); }
 }
 
 @keyframes blink-caret{
