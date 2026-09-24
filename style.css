@@ -34,8 +34,8 @@ body{
 .navbar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 5px 20px 4;
+    
+    padding: 10px 20px;
 }
 
 
@@ -334,17 +334,25 @@ h4{
 
 @media (max-width: 600px) {
     .navbar{
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        text-align: left;
+    }
+
+    .brand_name{
+        font-size: 0.7rem;
     }
 
     .nav_links{
-        gap: 15px;
-        justify-content: center;
+        gap: 10px;
+        font-size: 0.65rem;
+        justify-content: flex-end;
     }
 
+    /* ...rest of your existing mobile rules (.profile_section, .profile, .second_section, etc.) stay unchanged below this... */
+}
     .profile_section{
         padding: 20px 15px;
     }
