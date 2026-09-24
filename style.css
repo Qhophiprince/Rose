@@ -37,7 +37,6 @@ body{
     align-items: center;
     padding: 10px 20px;
     flex-wrap: wrap;
-    font-size:xx-small;
 }
 
 .logo_and_company_name{
@@ -218,7 +217,6 @@ h4{
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    font-size:xx-small;
 }
 
 .message:hover{
