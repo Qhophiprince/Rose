@@ -185,6 +185,7 @@ h4{
     gap: 10px;
     flex-wrap: wrap;
     align-items: center;
+    padding-top: 2px;
 }
 
 .cv{
@@ -216,7 +217,7 @@ h4{
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    font-size: x-small;
+    font-size:xx-small;
 }
 
 .message:hover{
