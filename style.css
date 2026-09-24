@@ -39,6 +39,10 @@ body{
     flex-wrap: wrap;
 }
 
+.navbar > div:last-child{
+    align-self: flex-end;
+}
+
 .logo_and_company_name{
     display: flex;
     align-items: center;
