@@ -348,10 +348,6 @@ h4{
         justify-content: center;
     }
 
-    .navbar > div:last-child{
-        align-self: flex-end;
-    }
-
     .profile_section{
         padding: 20px 15px;
     }
